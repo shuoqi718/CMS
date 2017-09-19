@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=chair
+comment0.target=java.util.List\ filterConferenceList(Chair)
+comment1.params=conference
+comment1.target=java.util.List\ getPaperList(Conference)
+comment2.params=paper
+comment2.target=java.util.List\ getReviewList(Paper)
+comment3.params=paper\ decision
+comment3.target=void\ setFinalDecision(Paper,\ java.lang.String)
+numComments=4

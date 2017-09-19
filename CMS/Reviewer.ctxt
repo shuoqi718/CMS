@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=username\ password
+comment0.target=Reviewer(java.lang.String,\ java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ getUsername()
+comment2.params=
+comment2.target=java.lang.String\ getPassword()
+comment3.params=
+comment3.target=java.util.List\ getReviewList()
+comment4.params=username
+comment4.target=void\ setUsername(java.lang.String)
+comment5.params=password
+comment5.target=void\ setPassword(java.lang.String)
+numComments=6

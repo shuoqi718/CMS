@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ViewReviewUI()
+comment1.params=
+comment1.target=void\ viewReview()
+comment2.params=conferenceList
+comment2.target=void\ displayConferenceList(java.util.List)
+comment3.params=chair
+comment3.target=Conference\ acceptConferenceChoice(Chair)
+comment4.params=paperList
+comment4.target=void\ displayPaperList(java.util.List)
+comment5.params=conference
+comment5.target=Paper\ acceptPaperChoice(Conference)
+comment6.params=reviewList
+comment6.target=void\ displayReviewList(java.util.List)
+comment7.params=paper
+comment7.target=Review\ acceptReviewChoice(Paper)
+comment8.params=
+comment8.target=java.lang.String\ acceptFinalDecision()
+comment9.params=
+comment9.target=void\ paperChoice()
+numComments=10
