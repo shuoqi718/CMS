@@ -7,19 +7,37 @@ import java.util.*;
  */
 public class ViewReviewControl
 {
-    public List<Conference> filterConferenceList(Chair chair)
+    public List<Conference> filterConferenceList(User user)
     {
-        return chair.getConferenceList();
+        List<Conference> filteredConference = new ArrayList<>();
+        for(Conference conference : DataTable.getConferenceList())
+        {
+            if(conference.getUser().equals(user))
+                filteredConference.add(conference);
+        }
+        return filteredConference;
     }
     
     public List<Paper> getPaperList(Conference conference)
     {
-        return conference.getPaperList();
+        List<Paper> filteredPaper = new ArrayList<>();
+        for( Paper paper : DataTable.getPaperList())
+        {
+            if(paper.getConference().equals(conference))
+                filteredPaper.add(paper);
+        }
+        return filteredPaper;
     }
     
     public List<Review> getReviewList(Paper paper)
     {
-        return paper.getReviewList();
+        List<Review> filteredReview = new ArrayList<>();
+        for( Review review : DataTable.getReviewList())
+        {
+            if(review.getPaper().equals(paper))
+                filteredReview.add(review);
+        }
+        return filteredReview;
     }
     
     public void setFinalDecision(Paper paper, String decision)

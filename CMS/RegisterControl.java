@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class RegisterControl
 {
-    public Chair addChair()
+    public User addUser(String role)
     {
         String username = "";
         String password = "";
@@ -16,30 +16,6 @@ public class RegisterControl
         username = input.nextLine();
         System.out.print("Please enter your password:");
         password = input.nextLine();
-        return new Chair(username,password);
-    }
-    
-    public Author addAuthor()
-    {
-        String username = "";
-        String password = "";
-        Scanner input = new Scanner(System.in);
-        System.out.print("Please enter your username:");
-        username = input.nextLine();
-        System.out.print("Please enter your password:");
-        password = input.nextLine();
-        return new Author(username,password);
-    }
-    
-    public Reviewer addReviewer()
-    {
-        String username = "";
-        String password = "";
-        Scanner input = new Scanner(System.in);
-        System.out.print("Please enter your username:");
-        username = input.nextLine();
-        System.out.print("Please enter your password:");
-        password = input.nextLine();
-        return new Reviewer(username,password);
+        return new User(username,password,role);
     }
 }

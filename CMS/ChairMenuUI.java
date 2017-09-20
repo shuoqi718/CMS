@@ -32,7 +32,7 @@ public class ChairMenuUI
                 case "4":break;
                 case "5": 
                     System.out.println("Thank you for using!");
-                    Session.setCurrentChair(new Chair("",""));
+                    Session.setCurrentUser(new User("","",""));
                     return;
                 default: System.out.println("Please enter correct number!");
             }

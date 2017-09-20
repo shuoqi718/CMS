@@ -1,23 +1,23 @@
 import java.util.*;
 /**
- * Write a description of class Author here.
+ * Write a description of class User here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Author
+public class User
 {
     private String username;
     private String password;
-    private List<Paper> PaperList;
-    private List<String> notificationList;
+    private String role;
+    private List<String> notification;
     
-    public Author(String username, String password)
+    public User(String username, String password, String role)
     {
         this.username = username;
         this.password = password;
-        PaperList = new ArrayList<>();
-        notificationList = new ArrayList<>();
+        this.role = role;
+        notification = new ArrayList<>();
     }
     
     public String getUsername()
@@ -30,14 +30,14 @@ public class Author
         return password;
     }
     
-    public List<Paper> getPaperList()
+    public String getRole()
     {
-        return PaperList;
+        return role;
     }
     
-    public List<String> getNotificationList()
+    public List<String> getNotification()
     {
-        return notificationList;
+        return notification;
     }
     
     public void setUsername(String username)

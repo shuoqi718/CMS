@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=chair
-comment0.target=java.util.List\ filterConferenceList(Chair)
+comment0.params=user
+comment0.target=java.util.List\ filterConferenceList(User)
 comment1.params=conference
 comment1.target=java.util.List\ getPaperList(Conference)
 comment2.params=paper

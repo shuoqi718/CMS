@@ -9,10 +9,14 @@ public class LoginUI
 {
     private LoginControl loginControl;
     private ChairMenuUI chairMenu;
+    private AuthorMenuUI authorMenu;
+    private ReviewerMenuUI reviewerMenu;
     public LoginUI()
     {
         loginControl = new LoginControl();
         chairMenu = new ChairMenuUI();
+        authorMenu = new AuthorMenuUI();
+        reviewerMenu = new ReviewerMenuUI();
     }
     
     public void login()
@@ -24,12 +28,23 @@ public class LoginUI
         switch(choice)
         {
             case "1":
-                if(loginControl.chairConfirmed())
+                if(loginControl.userConfirmed("chair"))
                     chairMenu.chairSubSystem();
                 else
                     System.out.println("Username/password wrong!");
-            case "2":break;
-            case "3":break;
+                break;
+            case "2":
+                if(loginControl.userConfirmed("author"))
+                    authorMenu.authorSubSystem();
+                else
+                    System.out.println("Username/password wrong!");
+                break;
+            case "3":
+                if(loginControl.userConfirmed("reviewer"))
+                    reviewerMenu.reviewerSubSystem();
+                else
+                    System.out.println("Username/password wrong!");
+                break;
             default:System.out.println("Please enter correct number!");
         }
     }

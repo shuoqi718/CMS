@@ -1,8 +1,4 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Chair\ addChair()
-comment1.params=
-comment1.target=Author\ addAuthor()
-comment2.params=
-comment2.target=Reviewer\ addReviewer()
-numComments=3
+comment0.params=role
+comment0.target=User\ addUser(java.lang.String)
+numComments=1

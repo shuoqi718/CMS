@@ -1,14 +1,6 @@
 #BlueJ class context
 comment0.params=
-comment0.target=Chair\ getCurrentChair()
-comment1.params=
-comment1.target=Author\ getCurrentAuthor()
-comment2.params=
-comment2.target=Reviewer\ getCurrentReviewer()
-comment3.params=chair
-comment3.target=void\ setCurrentChair(Chair)
-comment4.params=author
-comment4.target=void\ setCurrentAuthor(Author)
-comment5.params=reviewer
-comment5.target=void\ setCurrentReviewer(Reviewer)
-numComments=6
+comment0.target=User\ getCurrentUser()
+comment1.params=user
+comment1.target=void\ setCurrentUser(User)
+numComments=2

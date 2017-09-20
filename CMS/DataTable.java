@@ -7,22 +7,28 @@ import java.util.*;
  */
 public class DataTable
 {
-    private static List<Chair> chairList= new ArrayList<>();
-    private static List<Author> authorList= new ArrayList<>();
-    private static List<Reviewer> reviewerList= new ArrayList<>();
+    private static List<User> userList = new ArrayList<>();
+    private static List<Conference> conferenceList = new ArrayList<>();
+    private static List<Paper> paperList = new ArrayList<>();
+    private static List<Review> reviewList = new ArrayList<>();
     
-    public static List<Chair> getChairList()
+    public static List<User> getUserList()
     {
-        return chairList;
+        return userList;
     }
     
-    public static List<Author> getAuthorList()
+    public static List<Conference> getConferenceList()
     {
-        return authorList;
+        return conferenceList;
     }
     
-    public static List<Reviewer> getReviewerList()
+    public static List<Paper> getPaperList()
     {
-        return reviewerList;
+        return paperList;
+    }
+    
+    public static List<Review> getReviewList()
+    {
+        return reviewList;
     }
 }

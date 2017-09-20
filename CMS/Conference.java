@@ -8,10 +8,10 @@ import java.util.*;
 public class Conference
 {
     private String title;
-    private List<Paper> paperList;
-    public Conference(String title)
+    private User user;
+    public Conference(String title,User user)
     {
-        paperList = new ArrayList<>();
+        this.user = user;
         this.title = title;
     }
     
@@ -20,9 +20,9 @@ public class Conference
         return title;
     }
     
-    public List<Paper> getPaperList()
+    public User getUser()
     {
-        return paperList;
+        return user;
     }
     
     public void setTitle(String title)

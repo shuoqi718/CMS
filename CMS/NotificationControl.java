@@ -9,9 +9,10 @@ public class NotificationControl
 {
     public void addNotification(String message)
     {
-        for(Author author:DataTable.getAuthorList())
+        for(User user : DataTable.getUserList())
         {
-            author.getNotificationList().add(message);
+            if(user.getRole().equals("author"))
+                user.getNotification().add(message);
         }
     }
 }

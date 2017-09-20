@@ -13,6 +13,6 @@ public class CreateConferenceControl
         Scanner input = new Scanner(System.in);
         System.out.print("Please enter title:");
         title = input.nextLine();
-        Session.getCurrentChair().getConferenceList().add(new Conference(title));
+        DataTable.getConferenceList().add(new Conference(title, Session.getCurrentUser()));
     }
 }

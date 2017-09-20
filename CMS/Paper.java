@@ -9,10 +9,12 @@ public class Paper
 {
     private String title;
     private String finalDecision;
-    private List<Review> reviewList;
-    public Paper(String title)
+    private User user;
+    private Conference conference;
+    public Paper(String title, User user, Conference conference)
     {
-        reviewList = new ArrayList<>();
+        this.user = user;
+        this.conference = conference;
         this.title = title;
         finalDecision = "";
     }
@@ -27,9 +29,19 @@ public class Paper
         return finalDecision;
     }
     
-    public List<Review> getReviewList()
+    public User getUser()
     {
-        return reviewList;
+        return user;
+    }
+    
+    public Conference getConference()
+    {
+        return conference;
+    }
+    
+    public void setTitle(String title)
+    {
+        this.title = title;
     }
     
     public void setFinalDecision(String finalDecision)

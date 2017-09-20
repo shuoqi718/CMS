@@ -17,24 +17,24 @@ public class ViewReviewUI
     public void viewReview()
     {
         String choice = "";
-        Chair chair = Session.getCurrentChair();
+        User user = Session.getCurrentUser();
         Scanner input = new Scanner(System.in);
         while(!choice.equals("3"))
         {
-            if(viewReviewControl.filterConferenceList(chair).size()==0)
+            if(viewReviewControl.filterConferenceList(user).size()==0)
             {
                 System.out.println("There is no conference yet.");
                 return;
             }
-            displayConferenceList(viewReviewControl.filterConferenceList(chair));
-            Conference conference = acceptConferenceChoice(chair);
+            displayConferenceList(viewReviewControl.filterConferenceList(user));
+            Conference conference = acceptConferenceChoice(viewReviewControl.filterConferenceList(user));
             if(viewReviewControl.getPaperList(conference).size()==0)
             {
                 System.out.println("There is no paper yet.");
                 return;
             }
             displayPaperList(viewReviewControl.getPaperList(conference));
-            Paper paper = acceptPaperChoice(conference);
+            Paper paper = acceptPaperChoice(viewReviewControl.getPaperList(conference));
             paperChoice();
             choice = input.nextLine();
             switch(choice)
@@ -46,7 +46,7 @@ public class ViewReviewUI
                         return;
                     }
                     displayReviewList(viewReviewControl.getReviewList(paper));
-                    System.out.println("Review title:" + acceptReviewChoice(paper).getTitle());
+                    System.out.println("Review title:" + acceptReviewChoice(viewReviewControl.getReviewList(paper)).getTitle());
                     break;
                 case "2":viewReviewControl.setFinalDecision(paper, acceptFinalDecision());break;
                 case "3":break;
@@ -65,13 +65,13 @@ public class ViewReviewUI
         }
     }
     
-    private Conference acceptConferenceChoice(Chair chair) throws NumberFormatException,IndexOutOfBoundsException
+    private Conference acceptConferenceChoice(List<Conference> conferenceList) throws NumberFormatException,IndexOutOfBoundsException
     {
         int num = 0;
         Scanner input = new Scanner(System.in);
         System.out.print("Please choose the conference:");
         num = Integer.parseInt(input.nextLine());
-        return chair.getConferenceList().get(num-1);      
+        return conferenceList.get(num-1);      
     }
     
     private void displayPaperList(List<Paper> paperList)
@@ -84,13 +84,13 @@ public class ViewReviewUI
         }
     }
     
-    private Paper acceptPaperChoice(Conference conference) throws NumberFormatException,IndexOutOfBoundsException
+    private Paper acceptPaperChoice(List<Paper> paperList) throws NumberFormatException,IndexOutOfBoundsException
     {
         int num = 0;
         Scanner input = new Scanner(System.in);
         System.out.print("Please choose the paper:");
         num = Integer.parseInt(input.nextLine());
-        return conference.getPaperList().get(num-1); 
+        return paperList.get(num-1); 
     }
     
     private void displayReviewList(List<Review> reviewList)
@@ -103,13 +103,13 @@ public class ViewReviewUI
         }
     }
     
-    private Review acceptReviewChoice(Paper paper) throws NumberFormatException,IndexOutOfBoundsException
+    private Review acceptReviewChoice(List<Review> reviewList) throws NumberFormatException,IndexOutOfBoundsException
     {
         int num = 0;
         Scanner input = new Scanner(System.in);
         System.out.print("Please choose the review:");
         num = Integer.parseInt(input.nextLine());
-        return paper.getReviewList().get(num-1); 
+        return reviewList.get(num-1); 
     }
     
     private String acceptFinalDecision()

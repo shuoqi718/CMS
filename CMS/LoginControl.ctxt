@@ -1,8 +1,4 @@
 #BlueJ class context
-comment0.params=
-comment0.target=boolean\ chairConfirmed()
-comment1.params=
-comment1.target=boolean\ authorConfirmed()
-comment2.params=
-comment2.target=boolean\ reviewerConfirmed()
-numComments=3
+comment0.params=role
+comment0.target=boolean\ userConfirmed(java.lang.String)
+numComments=1

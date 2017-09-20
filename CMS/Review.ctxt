@@ -1,8 +1,12 @@
 #BlueJ class context
-comment0.params=title
-comment0.target=Review(java.lang.String)
+comment0.params=title\ user\ paper
+comment0.target=Review(java.lang.String,\ User,\ Paper)
 comment1.params=
-comment1.target=java.lang.String\ getTitle()
-comment2.params=title
-comment2.target=void\ setTitle(java.lang.String)
-numComments=3
+comment1.target=User\ getUser()
+comment2.params=
+comment2.target=Paper\ getPaper()
+comment3.params=
+comment3.target=java.lang.String\ getTitle()
+comment4.params=title
+comment4.target=void\ setTitle(java.lang.String)
+numComments=5

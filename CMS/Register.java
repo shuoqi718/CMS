@@ -20,9 +20,9 @@ public class Register
         choice = chooseRole();
         switch(choice)
         {
-            case "1": DataTable.getChairList().add(registerControl.addChair());break;
-            case "2": DataTable.getAuthorList().add(registerControl.addAuthor());break;
-            case "3": DataTable.getReviewerList().add(registerControl.addReviewer());break;
+            case "1": DataTable.getUserList().add(registerControl.addUser("chair"));break;
+            case "2": DataTable.getUserList().add(registerControl.addUser("author"));break;
+            case "3": DataTable.getUserList().add(registerControl.addUser("reviewer"));break;
             default: System.out.println("Please enter correct number!");
         }
     }

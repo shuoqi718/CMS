@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.params=
-comment0.target=java.util.List\ getChairList()
+comment0.target=java.util.List\ getUserList()
 comment1.params=
-comment1.target=java.util.List\ getAuthorList()
+comment1.target=java.util.List\ getConferenceList()
 comment2.params=
-comment2.target=java.util.List\ getReviewerList()
-numComments=3
+comment2.target=java.util.List\ getPaperList()
+comment3.params=
+comment3.target=java.util.List\ getReviewList()
+numComments=4
